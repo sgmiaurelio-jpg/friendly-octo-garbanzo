@@ -1,0 +1,27 @@
+
+body {
+    background-color: lightyellow;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 30px;
+}
+
+h1 {
+    color: darkred;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: green;
+    font-size: 26px;
+}
+
+p {
+    background-color: white;
+    padding: 15px;
+    border: 2px solid lightblue;
+    border-radius: 8px;
+}
+
