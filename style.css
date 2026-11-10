@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+#main-title {
+    color: darkblue;
+    text-align: center;
+}
+
+h2 {
+    color: #2874a6;
+}
+
+.block {
+    background-color: lightblue;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.inline {
+    color: red;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+.highlight {
+    color: green;
+    font-weight: bold;
+    background-color: lightyellow;
+    padding: 8px;
+}
+
+#unique {
+    color: purple;
+    font-weight: bold;
+    border: 2px solid purple;
+    padding: 10px;
+  }
