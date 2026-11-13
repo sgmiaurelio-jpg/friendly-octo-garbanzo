@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenge #9 - Video and Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+        }
+
+        iframe, video {
+            width: 100%;
+            max-width: 560px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to My Website</h1>
+
+    <section>
+        <h2>Embedded Video</h2>
+        <iframe
+            src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+            height="315"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <section>
+        <h2>Local Video</h2>
+        <video controls>
+            <source src="sample.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Message:</label>
+            <textarea placeholder="Write your message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+              </html>
+              
