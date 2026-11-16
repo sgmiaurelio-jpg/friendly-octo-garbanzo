@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 11 - How Tos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My How To Website</h1>
+    <p>Welcome to my collection of interactive features!</p>
+
+    <h2>Accordion</h2>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>This is the content of Section 1.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>This is the content of Section 2.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>This is the content of Section 3.</p>
+    </div>
+
+    <script>
+        const acc = document.querySelectorAll(".accordion");
+
+        acc.forEach(button => {
+            button.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        });
+    </script>
+
+</body>
+  </html>
+  
