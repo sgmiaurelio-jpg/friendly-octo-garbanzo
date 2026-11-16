@@ -1,0 +1,34 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.accordion {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.accordion:hover,
+.accordion.active {
+    background-color: #555;
+}
+
+.panel {
+    display: none;
+    background-color: white;
+    padding: 15px;
+}
