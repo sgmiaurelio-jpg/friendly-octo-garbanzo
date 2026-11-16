@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 12 - How Tos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>My How To Website</h1>
+<p>Welcome to my collection of interactive features!</p>
+
+<h2>1. Accordion</h2>
+<button class="accordion">Section 1</button>
+<div class="panel"><p>This is Section 1.</p></div>
+
+<button class="accordion">Section 2</button>
+<div class="panel"><p>This is Section 2.</p></div>
+
+<h2>2. Tabs</h2>
+<div class="tabs">
+<button onclick="openTab('tab1')">Home</button>
+<button onclick="openTab('tab2')">About</button>
+<button onclick="openTab('tab3')">Contact</button>
+</div>
+
+<div id="tab1" class="tabcontent">Welcome Home!</div>
+<div id="tab2" class="tabcontent">About My Website</div>
+<div id="tab3" class="tabcontent">Contact Us</div>
+
+<h2>3. Dropdown Menu</h2>
+<div class="dropdown">
+<button onclick="toggleMenu()">Open Menu</button>
+<div id="menu" class="menu">
+<a href="#top">Home</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+
+<h2>4. Modal Box</h2>
+<button onclick="openModal()">Open Modal</button>
+<div id="modal" class="modal">
+<div class="modal-content">
+<button onclick="closeModal()">Close</button>
+<p>Hello! This is my modal window.</p>
+</div>
+</div>
+
+<h2>5. Slideshow</h2>
+<div class="slideshow">
+<img id="slide" src="https://placehold.co/600x250?text=Slide+1" alt="Slideshow image">
+<button onclick="changeSlide(-1)">Previous</button>
+<button onclick="changeSlide(1)">Next</button>
+</div>
+
+<h2>6. Scroll to Top</h2>
+<button onclick="scrollTopPage()">Back to Top</button>
+
+<script>
+const acc = document.querySelectorAll(".accordion");
+
+acc.forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        const panel = this.nextElementSibling;
+        panel.style.display =
+            panel.style.display === "block" ? "none" : "block";
+    });
+});
+
+function openTab(id) {
+    document.querySelectorAll(".tabcontent").forEach(tab => {
+        tab.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+}
+
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display =
+        menu.style.display === "block" ? "none" : "block";
+}
+
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+let slideNumber = 1;
+
+function changeSlide(direction) {
+    slideNumber += direction;
+
+    if (slideNumber > 3) slideNumber = 1;
+    if (slideNumber < 1) slideNumber = 3;
+
+    document.getElementById("slide").src =
+        "https://placehold.co/600x250?text=Slide+" + slideNumber;
+}
+
+function scrollTopPage() {
+    window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+openTab("tab1");
+</script>
+
+</body>
+</html>
